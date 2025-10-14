@@ -1,0 +1,45 @@
+{
+  "name": "meme-gallery",
+  "version": "1.0.0",
+  "description": "Meme Gallery API with like/unlike feature, Prisma, and tests",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "prisma:migrate": "prisma migrate dev --name add_user_likes_meme",
+    "test": "cross-env JWT_SECRET=testsecret jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarrylClay2005/Meme-Gallery.git"
+  },
+  "keywords": [
+    "express",
+    "prisma",
+    "sqlite",
+    "jest",
+    "supertest",
+    "meme"
+  ],
+  "author": "DarrylClay2005",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarrylClay2005/Meme-Gallery/issues"
+  },
+  "homepage": "https://github.com/DarrylClay2005/Meme-Gallery#readme",
+  "dependencies": {
+    "@prisma/client": "^6.17.1",
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "joi": "^18.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.17.1",
+    "supertest": "^7.1.4"
+  }
+}
